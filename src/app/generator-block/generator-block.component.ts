@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { QuoteService } from '../quote.service';
 
 @Component({
   selector: 'app-generator-block',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GeneratorBlockComponent implements OnInit {
 
-  constructor() { }
+  theQuote: string
 
-  ngOnInit() {
+  constructor(private quoteService: QuoteService) { }
+
+  nextQuote(): string {
+    const quotes = this.quoteService.getQuotes();
+    const quoteLength = quotes.length;
+    this.theQuote = quotes[Math.floor(Math.random() * quoteLength)];
   }
+
+  ngOnInit() { }
 
 }

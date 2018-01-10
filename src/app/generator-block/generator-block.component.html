@@ -1,7 +1,12 @@
-  <div class="row">
-    <div class="col-md-offset-3 col-md-6" style="background-color:aqua">
-      <h2 class="text-center">Quote of the moment</h2>
+<div class="row">
+  <div class="col-md-offset-3 col-md-6" style="background-color:aqua">
+    <h2 class="text-center">Quote of the moment</h2>
+    <div *ngIf="!theQuote">
       <p class="text-center">Add your random quote here!</p>
-      <button class="btn btn-primary col-md-offset-3 col-md-6" (click)="next()">Next Quote</button>
     </div>
+    <div *ngIf="theQuote">
+      <p class="text-center">{{theQuote}}</p>
+    </div>
+    <button class="btn btn-primary col-md-offset-3 col-md-6" (click)="nextQuote()">Next Quote</button>
   </div>
+</div>

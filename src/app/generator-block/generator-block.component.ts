@@ -12,7 +12,7 @@ export class GeneratorBlockComponent implements OnInit {
 
   constructor(private quoteService: QuoteService) { }
 
-  nextQuote(): string {
+  nextQuote() {
     const quotes = this.quoteService.getQuotes();
     const quoteLength = quotes.length;
     this.theQuote = quotes[Math.floor(Math.random() * quoteLength)];

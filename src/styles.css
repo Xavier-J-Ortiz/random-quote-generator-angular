@@ -1,24 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~bootstrap/dist/css/bootstrap.min.css';
 @font-face {
-    font-family: myFirstCursiveFont;
-    src: url('assets/UKIJJe.ttf');
+  font-family: myFirstCursiveFont;
+  src: url('assets/UKIJJe.ttf');
 }
 body {
-    background: url('assets/dark-website-background.jpg') no-repeat center center fixed;
-    background-size: cover;
-    font-family: myFirstCursiveFont;
+  background: url('assets/dark-website-background.jpg') no-repeat center center fixed;
+  background-size: cover;
+  font-family: myFirstCursiveFont;
 }
 h1 {
-    font-size: 8rem;
+  font-size: 8rem;
 }
 h2 {
-    font-size: 5rem;
+  font-size: 5rem;
 }
 p {
-    font-size: 3rem; 
+  font-size: 3rem;
 }
-
+.navi-font{
+  font-family: Cantarell;
+}
 .button-font {
-    font-size: 3rem;
+  font-size: 3rem;
 }

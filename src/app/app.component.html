@@ -1,7 +1,19 @@
 <!--The content below is only a placeholder and can be replaced.-->
+<nav class="navbar navbar-default navi-font">
+
+  <a class="navbar-brand">Random Generator</a>
+  <!--<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">-->
+  <!--<span class="navbar-toggler-icon"></span>-->
+  <!--</button>-->
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <a class="nav-link" routerLink="/generator">Home </a>
+        <a class="nav-link" routerLink="/why">Why Do This</a>
+  </div>
+</nav>
 <div class="container-fluid title-quote-holder">
   <h1 class="text-primary text-center">
     This is my quote generator!
   </h1>
-  <app-generator-block></app-generator-block>
+  <router-outlet></router-outlet>
 </div>

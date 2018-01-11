@@ -1,3 +1,28 @@
-<p style="color: aliceblue" class="text-center">
-  the-why works!
+<p>
+  The reason as to why I'm creating a random generator quote is for a couple of reasons. Initially, I wanted to do a
+  project to start showing off my full stack skills. I had a lot of experience doing a lot of things on the backend,
+  however, I think that though I do have some more experience now in full stack skills, I had no platform to showcase
+  them. I didn't have some projects to show that would actually validate that I'm able to do what I say I can do. Also
+  I've worked a bit with Ruby and Ruby on Rails. I hadn't worked that much with Angular, so I thought I would do a
+  couple of projects based on this.
+
 </p>
+<p>
+  This project was quite interesting, as since it ended up having some cool features that I hadn't done before. Mainly,
+  pulling from an foreign website's API for a quote JSON. To be honest, I thought it was going to be straight forward.
+  The link to where I found the API information was located here https://quotesondesign.com. The API information is on
+  the bottom right of the page. The API link is a standard JSON object, and I thought that all I had to do is to import
+  the data structure with a parser, then capture the data and rotate the fetched data quotes in the generator's view.
+</p>
+<p>
+  However, I didn't know that fetching data from a foreign website was not typically allowed! I would have to turn on
+  Cross Origin Resource Sharing (CORS) headers in order to fetch this data. However, I would have to do that on my
+  local serving instance, and to be honest, I didn't want to have to do that since I was only using this locally and not
+  using a web server like Apache, or some sort of caching mechanism like NGINX, or Varnish.
+</p>
+<p>
+  I learned something new by using JSONP to fetch the JSON data. I was able to do this by appending `?callback=foo` to
+  the JSON URL. This, from my understanding, adds padding to the JSON and wraps it into a callback. The callback is
+  something that the page can digest. Because of this, I don't need to enable CORS on the machine serving the webpage!
+</p>
+

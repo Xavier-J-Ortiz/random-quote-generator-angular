@@ -9,6 +9,7 @@ import { QuoteService } from './quote.service';
 import { TheWhyComponent } from './the-why/the-why.component';
 import {RouterModule} from '@angular/router/src/router_module';
 
+import { HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import {RouterModule} from '@angular/router/src/router_module';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [QuoteService],
   bootstrap: [AppComponent]

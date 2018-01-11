@@ -18,4 +18,11 @@ export class QuoteService {
     return quotes;
   }
 
+  formatQuotes(data) {
+    const formattedQuote: {title: string, content: string}[] = [];
+    data.forEach((element) => {
+      formattedQuote.push({title: element.title, content: element.content});
+    });
+    return formattedQuote;
+  }
 }

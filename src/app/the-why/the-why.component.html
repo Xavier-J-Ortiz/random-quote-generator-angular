@@ -25,4 +25,9 @@
   the JSON URL. This, from my understanding, adds padding to the JSON and wraps it into a callback. The callback is
   something that the page can digest. Because of this, I don't need to enable CORS on the machine serving the webpage!
 </p>
-
+<p>
+  Finally, my final learning was when deploying to heroku! I had do move some dependencies, such as @angular/compiler, 
+  @angular/cli, @angular/compiler-cli, as well as the typescript package from devDependencies to dependencies. Similarly
+  I had to add the express npm package, as well as add a script to initialize it on creation of the app in heroku via 
+  calling the script on start via specifying it in the package.json file.
+</p>

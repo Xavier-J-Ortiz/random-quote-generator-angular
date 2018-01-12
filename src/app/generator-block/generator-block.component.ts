@@ -20,7 +20,7 @@ export class GeneratorBlockComponent implements OnInit {
   }
 
   ngOnInit() { // Make the HTTP request:
-    this.http.get('http://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=40?callback=foo').subscribe(data => {
+    this.http.get('https://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=40?callback=foo').subscribe(data => {
       // Read the result field from the JSON response.
       this.quotes = this.quoteService.formatQuotes(data);
       this.quoteLength = this.quotes.length;
